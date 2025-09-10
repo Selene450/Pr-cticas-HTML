@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form action="http://193.147.87.202/procesaform.php" method="POST" enctype="multipart/form-data">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name-enviado-por-Ana" required/>
+            <br>
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" size="20"/>
+            <br>
+            <fieldset>
+                <legend>Cual estu grupo de edad</legend>
+                Menos de 18 años: <input type="radio" id="menos18" value="menos18" name="edad" checked/>
+                18 a 30: <input type="radio" id="18a30" value="18a30" name="edad"/>
+                31 a 50: <input type="radio" id="31a50" value="31a50" name="edad"/>
+                Más de 50: <input type="radio" id="mas50" value="mas50" name="edad"/>
+            </fieldset>
+
+            <fieldset>
+                <legend>Cuales de estos animales te gustan</legend>
+                Gatos: <input type="checkbox" id="eleccion1" value="gatos"/><br>
+                Perros: <input type="checkbox" id="eleccion2" value="perros"/><br>
+                <input type="image" src="gatos.webp" name="gatos" alt="No se puede visualizar"/>
+            </fieldset>
+            <fieldset>
+                <legend>Cuales son tus equipos favoritos</legend>
+                <select name="equipo" size="5" multiple="multiple">
+                    <option selected="selected">Real Madrid</option>
+                    <option>Barça</option>
+                    <option>Zaragoza</option>
+                    <option>Sevilla</option>
+                    <option>Betis</option>
+                </select>
+            </fieldset>
+            <label for="foto">Fotografía:</label>
+            <input type="file" id="foto"/>
+            <br>
+            <label for="comentarios">Comentarios:</label>
+            <textarea rows="20" cols="100" name="comentarios"></textarea>
+            <input type="hidden" id="numero de request" value="1" name="nreq"/>
+            <br>
+            <input type="submit" value="Submit"/>
+            <br>
+            <input type="reset" value="Borrar"/>
+        </form>
+    </body>
+</html>
